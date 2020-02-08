@@ -1,13 +1,20 @@
 {
-  "parser": "babel-eslint",
-  "extends": ["airbnb"],
-  "env": {
-    "browser": true,
-    "node": true
-  },
-  "rules": {
-    "no-console": "off",
-    "comma-dangle": "off",
-    "react/jsx-filename-extension": "off"
-  }
+	"parser": "babel-eslint",
+	"extends": ["airbnb/hooks"],
+	"env": {
+		"browser": true,
+		"node": true
+	},
+	"rules": {
+		"no-tabs": "off",
+		"indent": "off",
+		"no-console": "off",
+		"comma-dangle": "off",
+		"react/jsx-filename-extension": "off",
+		"no-unused-vars": [
+			"error",
+			{ "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+		],
+		"linebreak-style": "off"
+	}
 }

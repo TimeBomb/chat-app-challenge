@@ -1,0 +1,27 @@
+.ChatInput {
+	display: flex;
+}
+
+.messageTextBox {
+	flex: 1;
+	border: 1px solid #444444;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	background-color: #2f2f2f;
+	border-right: 0;
+	color: #eeeeee;
+	width: 100%;
+	padding: 6px 8px;
+}
+
+.sendMessageButton {
+	flex: 0 120px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	background-color: #0033aa;
+	border: 1px solid #444444;
+	border-left: 0;
+	font-size: 16px;
+	color: #ffffff;
+	cursor: pointer;
+}

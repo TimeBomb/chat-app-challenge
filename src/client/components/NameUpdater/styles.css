@@ -1,0 +1,31 @@
+.editingText,
+.viewingText {
+	cursor: pointer;
+	padding-left: 8px;
+	font-size: 14px;
+}
+
+.viewingText {
+	padding: 7px 0 7px 8px;
+}
+
+.editingText {
+	padding-top: 2px;
+}
+
+.name {
+	font-weight: bold;
+}
+
+.nameInputForm {
+	display: inline-block;
+	padding: 3px 3px 4px 2px;
+}
+
+.nameInput {
+	border: 1px solid #444444;
+	border-radius: 8px;
+	background-color: #2f2f2f;
+	color: #ffffff;
+	padding: 2px 0 2px 8px;
+}

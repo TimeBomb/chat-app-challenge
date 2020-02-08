@@ -1,0 +1,40 @@
+.MessagesList {
+	position: relative;
+	overflow-y: auto;
+	width: 100%;
+	height: calc(100% - 60px); /* The height of the footer that the MessagesList appears above */
+}
+
+.messages {
+	/* This allows chat to start at the bottom and be added above */
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	max-height: 100%;
+}
+
+.noMessagesText {
+	padding: 8px;
+}
+
+.message {
+	padding: 3px 3px 3px 8px;
+	width: 100%;
+}
+
+/* Space between the bottom-most message and the chat input footer */
+.message:last-child {
+	padding-bottom: 8px;
+}
+
+.message:nth-child(odd) {
+	background-color: #111122;
+}
+
+.message:nth-child(even) {
+	background-color: #11112a;
+}
+
+.timestamp {
+	color: #666;
+}

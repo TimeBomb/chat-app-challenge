@@ -1,23 +1,29 @@
-import React, { Component } from 'react';
-import './app.css';
-import ReactImage from './react.png';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
-export default class App extends Component {
-  state = { username: null };
+import { ActionCreators } from './redux/actions';
+import { MessagesList } from './components/MessagesList';
+import { ChatInput } from './components/ChatInput';
+import { NameUpdater } from './components/NameUpdater';
+import styles from './styles.css';
+import './global.css';
 
-  componentDidMount() {
-    fetch('/api/getUsername')
-      .then(res => res.json())
-      .then(user => this.setState({ username: user.username }));
-  }
+function App() {
+	const dispatch = useDispatch();
 
-  render() {
-    const { username } = this.state;
-    return (
-      <div>
-        {username ? <h1>{`Hello ${username}`}</h1> : <h1>Loading.. please wait!</h1>}
-        <img src={ReactImage} alt="react" />
-      </div>
-    );
-  }
+	useEffect(() => {
+		dispatch(ActionCreators.initializeSocket());
+	}, [dispatch]);
+
+	return (
+		<div className={styles.App}>
+			<MessagesList />
+			<div className={styles.footer}>
+				<ChatInput />
+				<NameUpdater />
+			</div>
+		</div>
+	);
 }
+
+export default App;
